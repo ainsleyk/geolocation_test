@@ -17,8 +17,6 @@ var dark = L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?
 });
 
 var map = L.map('map', {layers:[dark, light]}).fitWorld();
-
-
   function onLocationFound(e) {
       var radius = e.accuracy; //this defines a variable radius as the accuracy value returned by the locate method divided by 2. It is divided by 2 because the accuracy value is the sum of the estimated accuracy of the latitude plus the estimated accuracy of the longitude. The unit is meters.
 
@@ -35,7 +33,6 @@ var map = L.map('map', {layers:[dark, light]}).fitWorld();
       var times = SunCalc.getTimes(new Date(), e.latitude, e.longitude);
       var sunrise = times.sunrise.getHours();
       var sunset = times.sunset.getHours();
-
       var currentTime = new Date().getHours();
           if (sunrise < currentTime && currentTime < sunset){
             map.removeLayer(dark);
@@ -48,18 +45,15 @@ var map = L.map('map', {layers:[dark, light]}).fitWorld();
   }
 
   map.on('locationfound', onLocationFound); //this is the event listener
-
     function onLocationError(e) {
     alert(e.message);
   }
 
   map.on('locationerror', onLocationError);
-
   map.locate({setView: true, maxZoom: 16});
 
   var baseMaps = {
     "Day": light,
     "Night": dark
   };
-
   L.control.layers(baseMaps, null, {collapsed:false}).addTo(map);
