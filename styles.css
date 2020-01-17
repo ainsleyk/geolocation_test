@@ -1,0 +1,23 @@
+body {
+  padding: 0;
+  margin: 0;
+}
+
+html, body, #map {
+height: 100%;
+width: 100vw;
+}
+
+.leaflet-control-layers-expanded {
+  background: #989;
+  font-size: 1.2em;
+  font-weight: bold;
+  border: 'solid'
+}
+
+.leaflet-popup-content-wrapper {
+  background: #989;
+  font-size: 1.2em;
+  font-weight: bold;
+  border: 'solid'
+}
