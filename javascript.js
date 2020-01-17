@@ -1,4 +1,4 @@
-window.alert("This webpage will ask you for your device location. This infomation will only be used provide feeback on the accuracy of your device and will not be stored or shared. Results accurate within a 100 meters will display green, less accurate results will display red.")
+window.alert("This webpage will ask you for your device location. This infomation will only be used provide feeback on the accuracy of your device and will not be stored or shared. Results accurate within a 100 meters (328 ft) will display green, less accurate results will display red.")
 
 var light = L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoiYWluc2xleWttIiwiYSI6ImNrNWJpamc2ZzFiZDUzZ280NXRseGhxbTQifQ.NaYGtyhIxj8bMzApm0vtpA', {
     attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
